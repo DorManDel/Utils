@@ -15,32 +15,34 @@ This repository is designed to be:
 
 ## 📂 Project Structure
 
-utils/
-│
+
 ├── ds/
-│   ├── linked_list.hpp      // Custom doubly linked list
-│   ├── stack.hpp            // Stack (array / linked-list based)
-│   ├── queue.hpp            // Queue implementation
-│   ├── bst.hpp              // Binary Search Tree
-│   ├── avl.hpp              // AVL Tree (self-balancing BST)
-│   └── heap.hpp             // Binary Heap
+│ ├── linked_list.hpp // Custom doubly linked list
+│ ├── stack.hpp // Stack (array / linked-list based)
+│ ├── queue.hpp // Queue
+│ ├── bst.hpp // Binary Search Tree
+│ ├── avl.hpp // AVL Tree
+│ └── heap.hpp // Binary Heap
 │
 ├── algo/
-│   ├── graph_ds/
-│   │   ├── graph.hpp        // Graph ADT (abstract interface)
-│   │   ├── adj_list.hpp     // Adjacency List graph
-│   │   └── adj_matrix.hpp   // Adjacency Matrix graph
-│   │
-│   ├── bfs.hpp              // Breadth-First Search
-│   ├── dfs.hpp              // Depth-First Search
-│   └── dijkstra.hpp         // Shortest path algorithm
+│ ├── graph_ds/
+│ │ ├── graph.hpp // Graph ADT
+│ │ ├── adj_list.hpp // Adjacency List
+│ │ └── adj_matrix.hpp// Adjacency Matrix
+│ │
+│ ├── bfs.hpp
+│ ├── dfs.hpp
+│ └── dijkstra.hpp
 │
 ├── core/
-│   ├── complexity.hpp       // Complexity notes & helpers
-│   ├── timer.hpp            // Runtime measurements
-│   └── debug.hpp            // Debug utilities
+│ ├── complexity.hpp
+│ ├── timer.hpp
+│ └── debug.hpp
 │
-└── README.md
+├── demos/
+│ └── linked_list_demo.cpp
+│
+└── utils.hpp
 
 
 ---
