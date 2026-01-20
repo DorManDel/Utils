@@ -1,7 +1,7 @@
 
 ---
 
-# 2️⃣ Git Command Cheat-Sheet (קובץ נפרד)
+# 🧠 Git Command Cheat-Sheet 
 
 📄 **`docs/git_cheatsheet.md`**
 
@@ -40,3 +40,23 @@ git reset --hard HEAD
 git log --oneline  
 git diff  
 git show <commit>
+
+## Init & Clone
+git init
+git clone <repo>
+
+## Add & Commit
+git add .
+git commit -m "message"
+
+## Push / Pull
+git push
+git pull
+
+## Branch
+git branch
+git branch -m main
+
+## Submodules
+git submodule add <repo> <path>
+git submodule update --init --recursive

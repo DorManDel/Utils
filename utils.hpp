@@ -53,3 +53,17 @@
 // #include <utils/utils.hpp>
 
 // /mnt/d/Programming/Scripts/Dor/Utils
+
+/*
+Add Utils as SubModule:
+cd /mnt/<drive letter(c/d...)>/<Path of your Project/Files>
+git submodule add https://github.com/DorManDel/Utils.git Utils
+git commit -m "Add Utils as submodule"
+
+// Update Utils in the Project that uses it:
+cd Utils
+git pull origin main
+cd ..
+git add Utils
+git commit -m "Update Utils submodule"
+*/
