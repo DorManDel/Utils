@@ -1,0 +1,22 @@
+// FUNCTION TEMPLATE SUMMARY::
+
+/* =================================================================================================
+ * Function: <FUNCTION_NAME>
+ * -------------------------------------------------------------------------------------------------
+ * Purpose:
+ *   <1 sentence: what it does, for whom, and why>
+ *
+ * Parameters:
+ *   - <name> (<type>): <what it represents, valid range, ownership if pointer>
+ *
+ * Returns:
+ *   - <type>: <what it returns and what it means>
+ *
+ * Notes / Rules:
+ *   - <important constraints / invariants / what it does NOT do>
+ *   - Edge cases handled: <...>
+ *
+ * Complexity:
+ *   - Time:  O(<...>)
+ *   - Space: O(<...>)
+ * ================================================================================================= */

@@ -1,0 +1,231 @@
+//
+
+/* ============================================================
+ * Complexity Quick Reference
+ * ------------------------------------------------------------
+ * O(1)      - Constant
+ * O(log n)  - Logarithmic
+ * O(n)      - Linear
+ * O(n log n)- Efficient sorting
+ * O(n²)     - Quadratic (small n only)
+ * ============================================================ */
+
+/*
+ DATA STRUCTURES
+ ------------------------------------------------------------
+ Structure   | Search | Insert | Delete | Memory | Notes
+ ------------------------------------------------------------
+ Array       | O(n)   | O(n)   | O(n)   | Low    | Cache-friendly
+ BST         | O(n)   | O(n)   | O(n)   | Medium | Can degenerate
+ AVL Tree    | O(logn)| O(logn)| O(logn)| Higher | Strictly balanced
+ Heap        | O(n)   | O(logn)| O(logn)| Medium | Priority queue
+ Hash Table  | O(1)*  | O(1)*  | O(1)*  | High   | Needs hash
+ ------------------------------------------------------------
+ */
+
+// ----------------------------------------------------------------
+
+// ================================================================
+// ----------------------------------------------------------------
+
+🔍 Searching Algorithms
+
+// ----------------------------------------------------------------
+// ================================================================
+
+Linear Search — Θ(n)
+
+LINEAR-SEARCH(A, n, x)
+    for i ← 1 to n
+        if A[i] = x
+            return i
+    return NIL
+
+
+// ----------------------------------------------------------------
+
+Binary Search — Θ(log n)
+
+BINARY-SEARCH(A, low, high, x)
+    if low > high
+        return NIL
+    mid ← ⌊(low + high) / 2⌋
+    if A[mid] = x
+        return mid
+    else if A[mid] > x
+        return BINARY-SEARCH(A, low, mid − 1, x)
+    else
+        return BINARY-SEARCH(A, mid + 1, high, x)
+
+// ================================================================
+// ----------------------------------------------------------------
+
+🔃 Sorting Algorithms::
+
+// ----------------------------------------------------------------
+// ================================================================
+
+Insertion Sort — Θ(n²), stable, in-place
+
+INSERTION-SORT(A)
+    for j ← 2 to length[A]
+        key ← A[j]
+        i ← j − 1
+        while i > 0 ∧ A[i] > key
+            A[i + 1] ← A[i]
+            i ← i − 1
+        A[i + 1] ← key
+
+// ----------------------------------------------------------------
+
+Merge Sort — Θ(n log n)
+
+MERGE-SORT(A, p, r)
+    if p < r
+        q ← ⌊(p + r) / 2⌋
+        MERGE-SORT(A, p, q)
+        MERGE-SORT(A, q + 1, r)
+        MERGE(A, p, q, r)
+
+// ----------------------------------------------------------------
+
+Quick Sort — Θ(n log n) avg, Θ(n²) worst
+
+QUICKSORT(A, p, r)
+    if p < r
+        q ← PARTITION(A, p, r)
+        QUICKSORT(A, p, q − 1)
+        QUICKSORT(A, q + 1, r)
+
+// ================================================================
+// ----------------------------------------------------------------
+
+🌲 Trees::
+
+// ----------------------------------------------------------------
+// ================================================================
+
+Tree Node Structure:
+
+node.key
+node.left
+node.right
+node.parent // aka root
+
+// ----------------------------------------------------------------
+
+Binary Search Tree Search — Θ(h)
+
+TREE-SEARCH(x, k)
+    if x = NIL or k = x.key
+        return x
+    if k < x.key
+        return TREE-SEARCH(x.left, k)
+    else
+        return TREE-SEARCH(x.right, k)
+
+// ----------------------------------------------------------------
+
+Inorder Traversal (BST sorted output)
+
+INORDER-TREE-WALK(x)
+    if x ≠ NIL
+        INORDER-TREE-WALK(x.left)
+        PRINT x.key
+        INORDER-TREE-WALK(x.right)
+
+// ================================================================
+// ----------------------------------------------------------------
+
+📚 Stack (LIFO)::
+
+// ----------------------------------------------------------------
+// ================================================================
+
+PUSH(S, x)
+    top[S] ← top[S] + 1
+    S[top[S]] ← x
+
+
+POP(S)
+    if top[S] = 0
+        error
+    top[S] ← top[S] − 1
+    return S[top[S] + 1]
+
+// ================================================================
+// ----------------------------------------------------------------
+
+📥 Queue (FIFO)::
+
+// ----------------------------------------------------------------
+// ================================================================
+
+ENQUEUE(Q, x)
+    Q[tail] ← x
+    tail ← tail + 1
+
+DEQUEUE(Q)
+    x ← Q[head]
+    head ← head + 1
+    return x
+
+// ================================================================
+// ----------------------------------------------------------------
+
+🌐 Graph Algorithms::
+
+// ----------------------------------------------------------------
+// ================================================================
+
+Breadth-First Search (BFS) — Θ(V + E)
+
+BFS(G, s)
+    for each vertex v ∈ G.V
+        v.color ← WHITE
+        v.d ← ∞
+        v.parent ← NIL
+    s.color ← GRAY
+    s.d ← 0
+    ENQUEUE(Q, s)
+
+    while Q not empty
+        u ← DEQUEUE(Q)
+        for each v ∈ G.Adj[u]
+            if v.color = WHITE
+                v.color ← GRAY
+                v.d ← u.d + 1
+                v.parent ← u
+                ENQUEUE(Q, v)
+        u.color ← BLACK
+
+// ================================================================
+// ----------------------------------------------------------------
+
+Depth-First Search (DFS) — Θ(V + E)
+
+DFS(G)
+    for each vertex u ∈ G.V
+        u.color ← WHITE
+        u.parent ← NIL
+    time ← 0
+    for each vertex u ∈ G.V
+        if u.color = WHITE
+            DFS-VISIT(G, u)
+
+// ----------------------------------------------------------------
+// ================================================================
+
+⏱ Complexity Reference::
+
+Algorithm	Time
+Linear Search	Θ(n)
+Binary Search	Θ(log n)
+Insertion Sort	Θ(n²)
+Merge Sort	Θ(n log n)
+Quick Sort	Θ(n log n) avg
+BST ops	Θ(h)
+BFS / DFS	Θ(V + E)
+
+// ----------------------------------------------------------------
+// ================================================================

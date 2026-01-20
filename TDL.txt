@@ -1,0 +1,70 @@
+[CORE SETUP]
+[ ] Initialize Git repository
+[ ] Create GitHub repository
+[ ] Push initial clean structure
+[ ] Add README.md
+[ ] Add TODO.md
+[ ] Define coding conventions (namespaces, headers, style)
+
+[STACK IMPLEMENTATION]
+[ ] Array-based stack (DONE – base version)
+[ ] Dynamic resizing (vector-like behavior)
+[ ] Exception-based error handling
+[ ] Linked-list stack implementation
+[ ] String-only stack (manual memory management)
+[ ] Compare array stack vs linked stack
+
+[DATA STRUCTURES]
+[ ] Queue (array)
+[ ] Queue (linked list)
+[ ] Heap (min/max)
+[ ] BST (insert/search/delete)
+[ ] AVL tree (full rotations)
+[ ] Tree traversal utilities
+
+[ALGORITHMS]
+[ ] Sorting algorithms (complete set)
+[ ] Searching algorithms
+[ ] Graph algorithms (BFS, DFS)
+[ ] Dijkstra
+[ ] Hash table (optional / advanced)
+
+[ANALYSIS & THEORY]
+[ ] Time complexity tables
+[ ] Memory usage comparison tables
+[ ] Productivity trade-offs
+[ ] “When to use what” summaries
+
+[DOCUMENTATION]
+[ ] ASCII cheat-sheets per DS
+[ ] Exam-friendly summaries
+[ ] Full manual (step-by-step explanations)
+[ ] Examples & usage patterns
+
+[QUALITY]
+[ ] Assertions vs exceptions discussion
+[ ] Debug utilities
+[ ] Performance timer integration
+[ ] Optional unit tests
+
+
+//
+GitHub Core Work:
+
+Working Directory → Staging → Commit → Remote (GitHub)
+
+git init
+git add .
+git commit -m "Initial utils library structure"
+git branch -M main
+git remote add origin https://github.com/YOUR_USER/utils-lib.git
+git push -u origin main
+
+Daily:
+git status          # what changed
+git add .           # stage everything
+git commit -m "stack: add base implementation"
+git push
+git pull    // Pull latest changes
+git log --oneline // see history
+git status
