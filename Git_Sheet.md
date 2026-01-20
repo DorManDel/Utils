@@ -60,3 +60,8 @@ git branch -m main
 ## Submodules
 git submodule add <repo> <path>
 git submodule update --init --recursive
+
+# daily WORKFLOW :
+git add .
+git commit -m "enter text here "
+git push -u origin main

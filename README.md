@@ -153,7 +153,7 @@ virtual int vertexCount() const = 0;
 virtual bool hasEdge(int src, int dest) const = 0;
 virtual void addEdge(int src, int dest) = 0;
 virtual void removeEdge(int src, int dest) = 0;
-
+```
 
 📑 3. AdjListGraph — Adjacency List Graph
 Representation: list of neighbors per vertex
