@@ -1,15 +1,4 @@
 /*
-push_back	הוספה לסוף	Θ(1)
-push_front	הוספה להתחלה	Θ(1)
-pop_back	מחיקה מהסוף	Θ(1)
-pop_front	מחיקה מההתחלה	Θ(1)
-size()	מספר איברים	Θ(1)
-empty()	האם ריקה	Θ(1)
-clear()	מחיקת כל הרשימה	Θ(n)
-
-*/
-
-/*
 HEAD
  ↓
 [10] ⇄ [20] ⇄ [30]
@@ -18,9 +7,66 @@ HEAD
 
 */
 #pragma once
+/*=============================================================================
+ *  linked_list<T> — Doubly Linked List
+ *-----------------------------------------------------------------------------
+ *  Description:
+ *    Generic doubly linked list implementation without STL.
+ *
+ *  Node Structure:
+ *    - info : stored value
+ *    - next : pointer to next node
+ *    - prev : pointer to previous node
+ *
+ *  Supported Operations:
+ *
+ *    Constructors / Destructor
+ *    -------------------------
+ *    linked_list()                     Θ(1)
+ *    linked_list(const T& value)       Θ(1)
+ *    ~linked_list()                    Θ(n)
+ *
+ *    Capacity
+ *    --------
+ *    empty()                           Θ(1)
+ *    size()                            Θ(1)
+ *
+ *    Insertion
+ *    ---------
+ *    push_front(const T&)              Θ(1)
+ *    push_back(const T&)               Θ(1)
+ *
+ *    Search
+ *    ------
+ *    search(const T&)                  Θ(n)
+ *    findNode(const T&)                Θ(n)
+ *
+ *    Deletion
+ *    --------
+ *    nodeToDelete(const T&)            Θ(n)
+ *    deleteAfter(Node*)                Θ(1)   // Academic: Delete(r, p)
+ *
+ *    Utilities
+ *    ---------
+ *    clear()                           Θ(n)
+ *
+ *===========================================================================*/
 
-#include <iostream>
-
+ /* ---------------------------------------------------------- */
+ #include <iostream>
+/* ---------------------------------------------------------- */
+/*
+ *  Complexity Summary
+ *  ------------------
+ *  push_front        Θ(1)
+ *  push_back         Θ(1)
+ *  search            Θ(n)
+ *  delete by value   Θ(n)
+ *  delete by pointer Θ(1)
+ *  size              Θ(1)
+ *  empty             Θ(1)
+ *  clear             Θ(n)
+ */
 namespace utils::ds
 {
     template <typename T>
@@ -43,16 +89,31 @@ namespace utils::ds
         void _destroyList();
 
     public:
-        linked_list();
-        linked_list(const T value);
-        ~linked_list() { _destroyList(); };
+        // Constructors / Destructor
+        linked_list();                      // Θ(1)
+        linked_list(const T value);         // Θ(1)
+        ~linked_list() { _destroyList(); }; // Θ(1)
 
-        inline void push_back(const T value);
-        inline void push_front(const T value);
+        // Capacity
+        bool empty() const { return _size == 0; } // Θ(1)
+        int size() const { return _size; }        // Θ(1)
 
-        inline Node<T> *findNode(const T &value, bool isNearEnd = false) const;
-        inline bool nodeToDelete(T value);
+        // Insertion
+        inline void push_back(const T value);  // Θ(1)
+        inline void push_front(const T value); // Θ(1)
+
+        // Search
+        inline Node<T> *findNode(const T &value, bool isNearEnd = false) const; // Θ(n)
+        inline bool nodeToDelete(T value);                                      // Θ(n)
         inline void printList() const;
+
+        // Utilities
+        void clear()                           // Θ(n)
+        {
+            _destroyList();
+            _head = _tail = nullptr;
+            _size = 0;
+        } 
     };
 
     // Empty_LL_Init:
@@ -201,3 +262,16 @@ namespace utils::ds
         return true;
     }
 }
+
+/*
+ *  Complexity Summary
+ *  ------------------
+ *  push_front        Θ(1)
+ *  push_back         Θ(1)
+ *  search            Θ(n)
+ *  delete by value   Θ(n)
+ *  delete by pointer Θ(1)
+ *  size              Θ(1)
+ *  empty             Θ(1)
+ *  clear             Θ(n)
+ */

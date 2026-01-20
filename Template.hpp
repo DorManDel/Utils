@@ -30,3 +30,39 @@ namespace utils::ds
     // Class declaration
 
 } // namespace utils::ds
+
+/*
+## X. <name> — <short description>
+
+Short description sentence.
+
+### Internal Structure
+(אם יש)
+
+### 🔧 Constructors
+#### <ctor signature>
+Purpose:
+Cost:
+
+### ➕ Insertion / Core Operations
+#### <function>
+Purpose:
+Cost:
+
+### 🔍 Search / Query
+#### <function>
+Purpose:
+Cost:
+
+### ❌ Deletion / Removal
+#### <function>
+Purpose:
+Cost:
+
+### 📊 Summary Table — <name>
+
+| Operation | Time Complexity |
+|---------|----------------|
+| ...     | Θ(...)         |
+
+*/

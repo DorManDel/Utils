@@ -16,31 +16,33 @@ This repository is designed to be:
 ## 📂 Project Structure
 
 
+```text
+utils/
 ├── ds/
-│ ├── linked_list.hpp // Custom doubly linked list
-│ ├── stack.hpp // Stack (array / linked-list based)
-│ ├── queue.hpp // Queue
-│ ├── bst.hpp // Binary Search Tree
-│ ├── avl.hpp // AVL Tree
-│ └── heap.hpp // Binary Heap
+│   ├── linked_list.hpp   // Custom doubly linked list
+│   ├── stack.hpp         // Stack (array / linked-list based)
+│   ├── queue.hpp         // Queue
+│   ├── bst.hpp           // Binary Search Tree
+│   ├── avl.hpp           // AVL Tree
+│   └── heap.hpp          // Binary Heap
 │
 ├── algo/
-│ ├── graph_ds/
-│ │ ├── graph.hpp // Graph ADT
-│ │ ├── adj_list.hpp // Adjacency List
-│ │ └── adj_matrix.hpp// Adjacency Matrix
-│ │
-│ ├── bfs.hpp
-│ ├── dfs.hpp
-│ └── dijkstra.hpp
+│   ├── graph_ds/
+│   │   ├── graph.hpp     // Graph ADT
+│   │   ├── adj_list.hpp  // Adjacency List
+│   │   └── adj_matrix.hpp// Adjacency Matrix
+│   │
+│   ├── bfs.hpp
+│   ├── dfs.hpp
+│   └── dijkstra.hpp
 │
 ├── core/
-│ ├── complexity.hpp
-│ ├── timer.hpp
-│ └── debug.hpp
+│   ├── complexity.hpp
+│   ├── timer.hpp
+│   └── debug.hpp
 │
 ├── demos/
-│ └── linked_list_demo.cpp
+│   └── linked_list_demo.cpp
 │
 └── utils.hpp
 
@@ -122,6 +124,17 @@ Each node contains:
 | delete by pointer   | Θ(1)            |
 
 ---
+
+### 🧪 Demo (How To Use)
+
+```cpp
+linked_list<int> list;
+list.push_back(10);
+list.push_back(20);
+list.push_front(5);
+list.nodeToDelete(20);
+
+# Full example in "demos/linked_list_demo.cpp"
 
 # 🌐 2. Graph ADT (`Graph`)
 
