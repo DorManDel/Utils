@@ -133,8 +133,9 @@ list.push_back(10);
 list.push_back(20);
 list.push_front(5);
 list.nodeToDelete(20);
+```
 
-# Full example in "demos/linked_list_demo.cpp"
+### Full example in "demos/linked_list_demo.cpp"
 
 # 🌐 2. Graph ADT (`Graph`)
 
